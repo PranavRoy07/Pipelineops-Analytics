@@ -17,6 +17,10 @@
   <img src="https://img.shields.io/badge/Quality%20Gates-9%2F9%20Passed-16A34A?style=for-the-badge" alt="9 of 9 quality gates passed" />
 </p>
 
+<a href="https://pipelineops-analytics-klmnopqr.streamlit.app/">
+  <img src="https://img.shields.io/badge/▶%20Open%20Live%20Dashboard-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Open the live PipelineOps Streamlit dashboard" />
+</a>
+
 <p>
   <a href="#the-story">The story</a> ·
   <a href="#architecture">Architecture</a> ·
@@ -304,7 +308,7 @@ The analysis uses `scipy.stats.linregress` rather than claiming a trend from a c
 | Experience | Best for | Location |
 | --- | --- | --- |
 | **Power BI** | Structured executive storytelling, filters, and presentation-ready reporting. | [`powerbi/PipelineOPS.pbix`](powerbi/PipelineOPS.pbix) |
-| **Streamlit** | Interactive investigation across Q1–Q4 plus pipeline health. | [`dashboard/app.py`](dashboard/app.py) |
+| **Streamlit** | Interactive investigation across Q1–Q4 plus pipeline health. | [Open the live dashboard](https://pipelineops-analytics-klmnopqr.streamlit.app/) · [`dashboard/app.py`](dashboard/app.py) |
 | **Data dictionary** | Field definitions and engineered-column transparency. | [`docs/data_dictionary.md`](docs/data_dictionary.md) |
 | **DAX measure library** | Rebuilding or reviewing Power BI calculations. | [`powerbi/dax_measures.dax`](powerbi/dax_measures.dax) |
 | **Dashboard blueprint** | Visual-by-visual Power BI build specification. | [`powerbi/dashboard_blueprint.md`](powerbi/dashboard_blueprint.md) |
