@@ -1,82 +1,121 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&amp;color=0:0B192C,45:2563EB,100:F97316&amp;height=235&amp;section=header&amp;text=PipelineOps&amp;fontSize=66&amp;fontColor=FFFFFF&amp;fontAlignY=38&amp;desc=Tech%20Labor%20Market%20Intelligence&amp;descAlignY=58&amp;descSize=20&amp;animation=fadeIn" alt="PipelineOps animated header" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=venom&color=0:0B192C,45:2563EB,100:F97316&height=260&section=header&text=PipelineOps&fontSize=72&fontColor=FFFFFF&fontAlignY=38&desc=Tech%20Labor%20Market%20Intelligence&descAlignY=60&descSize=21&animation=twinkling" alt="PipelineOps animated header" width="100%" />
 </p>
 
 <div align="center">
 
-# PipelineOps
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&duration=2600&pause=900&color=2563EB&center=true&vCenter=true&width=900&lines=Live+API+%E2%86%92+Bronze+%E2%86%92+Silver+%E2%86%92+Quality+Gates+%E2%86%92+Insights;Every+refresh+turns+job+listings+into+market+signals;172+jobs+%C2%B7+26+companies+%C2%B7+901+skill+links;9%2F9+quality+gates+passed+%E2%9C%85;Reliable+data.+Honest+analysis.+Confident+decisions." alt="Animated PipelineOps tagline" />
 
-### Tech Labor Market Intelligence — from live API data to decision-ready analytics
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&amp;weight=700&amp;size=19&amp;duration=2800&amp;pause=900&amp;color=2563EB&amp;center=true&amp;vCenter=true&amp;width=820&amp;lines=Live+API+%E2%86%92+Bronze+Layer+%E2%86%92+Quality+Gates+%E2%86%92+Intelligence;Every+refresh+turns+job+listings+into+clear+market+signals;Reliable+data.+Honest+analysis.+Confident+decisions." alt="Animated PipelineOps description" />
-
-<p>
-  <img src="https://img.shields.io/badge/Python-Data%20Pipeline-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python data pipeline" />
-  <img src="https://img.shields.io/badge/Power%20BI-Executive%20Analytics-F2C811?style=for-the-badge&logo=powerbi&logoColor=111827" alt="Power BI" />
-  <img src="https://img.shields.io/badge/Streamlit-Interactive%20App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit" />
-  <img src="https://img.shields.io/badge/Quality%20Gates-9%2F9%20Passed-16A34A?style=for-the-badge" alt="9 of 9 quality gates passed" />
-</p>
+<br />
 
 <a href="https://pipelineops-analytics-klmnopqr.streamlit.app/">
-  <img src="https://img.shields.io/badge/▶%20Open%20Live%20Dashboard-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Open the live PipelineOps Streamlit dashboard" />
+  <img src="https://img.shields.io/badge/%F0%9F%9A%80%20LIVE%20DEMO-Open%20the%20Dashboard-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Open the live PipelineOps dashboard" height="46" />
 </a>
 
+<br /><br />
+
 <p>
-  <a href="#the-story">The story</a> ·
-  <a href="#architecture">Architecture</a> ·
-  <a href="#dashboard-gallery">Dashboard gallery</a> ·
-  <a href="#run-it-locally">Run locally</a> ·
-  <a href="#data-quality--statistics">Quality & statistics</a>
+  <img src="https://img.shields.io/badge/Python-Pipeline-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/SciPy-Statistics-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white" alt="SciPy" />
+  <img src="https://img.shields.io/badge/SQLite-Serving%20Layer-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" />
+  <img src="https://img.shields.io/badge/Power%20BI-Executive%20Report-F2C811?style=for-the-badge&logo=powerbi&logoColor=111827" alt="Power BI" />
+  <img src="https://img.shields.io/badge/Streamlit-Live%20App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit" />
+</p>
+<p>
+  <img src="https://img.shields.io/badge/Airflow-DAG%20Ready-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white" alt="Airflow" />
+  <img src="https://img.shields.io/badge/pytest-Tested-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white" alt="pytest" />
+  <img src="https://img.shields.io/badge/Quality%20Gates-9%2F9%20Passed-16A34A?style=for-the-badge" alt="9 of 9 quality gates" />
+  <img src="https://img.shields.io/badge/Last%20Verified-22%20Oct%202026-F97316?style=for-the-badge" alt="Last verified 22 October 2026" />
 </p>
 
-> **PipelineOps** turns changing job-market listings into a repeatable analytics product: ingest, preserve, transform, validate, analyse, and present.
+<p>
+  <a href="#-live-demo"><b>Live demo</b></a> ·
+  <a href="#-the-story"><b>Story</b></a> ·
+  <a href="#-architecture"><b>Architecture</b></a> ·
+  <a href="#-dashboard-gallery"><b>Gallery</b></a> ·
+  <a href="#-run-it-locally"><b>Run locally</b></a> ·
+  <a href="#-data-quality--statistics"><b>Quality</b></a> ·
+  <a href="#-limitations--honest-caveats"><b>Caveats</b></a>
+</p>
 
 </div>
 
+<p align="center">
+  <img src="assets/pipeline-flow.svg" alt="Animated data flow: Ingest, Bronze, Transform, Quality Gates, Analyse, Dashboards" width="100%" />
+</p>
+
+> **PipelineOps** turns changing job-market listings into a repeatable analytics product: **ingest → preserve → transform → validate → analyse → present.**
+
 ---
 
-## The story
+## 🔴 Live Demo
 
-Job-market information is only useful when it is current, reliable, and easy to explore. PipelineOps is an end-to-end analytics project built around that idea. It collects jobs from a live source, protects the original pull in a bronze layer, creates analysis-ready tables, stops bad data with quality gates, produces a statistical insight, and delivers the results in both **Power BI** and **Streamlit**.
+<div align="center">
 
-The project answers four practical questions:
+### 👉 [**pipelineops-analytics-klmnopqr.streamlit.app**](https://pipelineops-analytics-klmnopqr.streamlit.app/) 👈
 
-| Question | Decision supported |
+<a href="https://pipelineops-analytics-klmnopqr.streamlit.app/">
+  <img src="https://img.shields.io/badge/▶%20Launch%20PipelineOps%20Live-Streamlit%20Cloud-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Launch live dashboard" />
+</a>
+
+</div>
+
+> [!TIP]
+> Free Streamlit apps go to sleep when idle. If you see a "wake up" screen, click the button and give it about 30 seconds.
+
+| Tab | What to try | Question it answers |
+| --- | --- | --- |
+| **Skill trends** | Compare week-over-week movers | Which skills are rising or falling? |
+| **Compensation** | Filter by seniority and category | Which roles and skills pay the most? |
+| **Companies** | Sort by posting volume and repost rate | Who is hiring, and who keeps reposting? |
+| **Workplace mix** | Track remote / hybrid / on-site over time | How are workplace preferences shifting? |
+| **Pipeline health** | Open run history and quality results | Can I trust this data? |
+
+---
+
+## 📖 The story
+
+Job-market information is only useful when it is current, reliable, and easy to explore. PipelineOps collects jobs from a live source, protects the original pull in a bronze layer, builds analysis-ready tables, blocks bad data with quality gates, produces a statistical insight, and delivers it in both **Power BI** and **Streamlit**.
+
+| ❓ Question | 🎯 Decision supported |
 | --- | --- |
 | Which skills are trending up or down week over week? | Prioritise learning and hiring skills. |
 | Which roles and skills pay the most? | Benchmark compensation and career paths. |
 | Which companies post the most jobs and how often do they repost? | Identify active employers and repeat-posting behaviour. |
 | How does remote, hybrid, and on-site demand change over time? | Track workplace preference shifts. |
 
-### Latest verified run
+### 📌 Latest verified run
 
-The values below are a transparent snapshot from the verified project output on **22 October 2026**. Run the pipeline again to refresh the figures.
+Snapshot from the verified project output on **22 October 2026**. Re-run the pipeline to refresh.
 
-| Metric | Verified result |
-| --- | ---: |
-| Unique job listings | 172 |
-| Companies represented | 26 |
-| Skill-to-job records | 901 |
-| Data-quality gates | 9 / 9 passed |
-| Quality score | 100% |
-| Python demand trend | -0.355 listings/day, statistically significant (p = 0.0080) |
+<div align="center">
+
+| 💼 Unique jobs | 🏢 Companies | 🔗 Skill-job links | ✅ Quality gates | 🏆 Quality score |
+| :---: | :---: | :---: | :---: | :---: |
+| **172** | **26** | **901** | **9 / 9** | **100%** |
+
+| 🐍 Python demand trend | Slope | p-value | R² |
+| :---: | :---: | :---: | :---: |
+| Statistically significant decline | **-0.355 listings/day** | **0.0080** | **0.316** |
+
+</div>
 
 <details>
-<summary><strong>What makes this an engineering project, not just a dashboard?</strong></summary>
+<summary><strong>🛠️ What makes this an engineering project, not just a dashboard?</strong></summary>
 
 <br />
 
-- The raw API response is retained before transformations occur.
-- Pipeline stages are explicit: ingestion → transformation → validation → statistical analysis → storage.
+- The raw API response is retained before any transformation.
+- Stages are explicit: ingestion → transformation → validation → statistical analysis → storage.
 - A run history records timing, status, records processed, and quality outcome.
 - The dashboard reads the cleaned analytical layer, never the raw source.
-- The same curated data supports a portfolio-ready Power BI report and an interactive Streamlit application.
+- One curated dataset powers both the Power BI report and the Streamlit app.
 
 </details>
 
 ---
 
-## Architecture
+## 🏗️ Architecture
 
 ```mermaid
 flowchart LR
@@ -87,7 +126,7 @@ flowchart LR
     E --> F["🥈 Curated layer\nFact + bridge tables"]
     F --> G["🗄️ SQLite / optional S3"]
     G --> H["📊 Power BI\n4-page executive report"]
-    G --> I["🖥️ Streamlit\nInteractive analytics app"]
+    G --> I["🖥️ Streamlit\nLive analytics app"]
 
     classDef source fill:#0EA5E9,stroke:#0369A1,color:#fff
     classDef process fill:#7C3AED,stroke:#5B21B6,color:#fff
@@ -99,61 +138,69 @@ flowchart LR
     class H,I output
 ```
 
-### The pipeline, step by step
+### 🔄 The pipeline, step by step
 
 | Stage | What happens | Key output |
 | --- | --- | --- |
 | **01 · Ingest** | Calls the job API with retry, backoff, logging, and failure handling. | Untouched JSON in `raw_data/` |
 | **02 · Preserve** | Keeps the bronze source partitioned by ingestion date. | Reproducible source history |
 | **03 · Transform** | Standardises dates, salary, workplace type, skills, company details, and repost flags. | `fact_jobs.csv` + `job_skills_bridge.csv` |
-| **04 · Validate** | Checks row count, uniqueness, nulls, expected schema, and salary bounds. | `quality_report.json` |
-| **05 · Analyse** | Runs linear-regression analysis for job demand and salary/skill relationships. | `statistical_insights.json` |
-| **06 · Serve** | Writes analytical data for Power BI and Streamlit consumption. | SQLite tables and clean CSVs |
+| **04 · Validate** | Checks row count, uniqueness, nulls, schema, and salary bounds. | `quality_report.json` |
+| **05 · Analyse** | Runs linear regression on job demand and salary/skill relationships. | `statistical_insights.json` |
+| **06 · Serve** | Writes analytical data for Power BI and Streamlit. | SQLite tables and clean CSVs |
 | **07 · Orchestrate** | Supports one-off, scheduled, and Airflow DAG execution. | Run history and alert-ready logs |
 
 ---
 
-## Dashboard gallery
+## 🖼️ Dashboard gallery
 
-The Power BI report is deliberately structured as a narrative: **market pulse → skills → compensation → employers and workplace mix**. Open the source report at [`powerbi/PipelineOPS.pbix`](powerbi/PipelineOPS.pbix).
+The Power BI report is a narrative: **market pulse → skills → compensation → employers and workplace mix**. Source report: [`powerbi/PipelineOPS.pbix`](powerbi/PipelineOPS.pbix).
 
-### 01 — Executive overview
+<table>
+<tr>
+<td width="50%" valign="top">
 
-<p align="center">
-  <img src="assets/Overview.png" alt="Power BI executive overview page" width="100%" />
-</p>
+#### 01 · Executive overview
+<img src="assets/Overview.png" alt="Power BI executive overview page" width="100%" />
 
-**Purpose:** Establish the market baseline with jobs tracked, average salary, remote share, company count, in-demand skills, workplace distribution, recent opportunities, and posting volume.
+Market baseline: jobs tracked, average salary, remote share, company count, in-demand skills, and posting volume.
 
-### 02 — Skill demand & growth trajectory
+</td>
+<td width="50%" valign="top">
 
-<p align="center">
-  <img src="assets/Trends.png" alt="Power BI skill demand and growth trajectory page" width="100%" />
-</p>
+#### 02 · Skill demand & growth
+<img src="assets/Trends.png" alt="Power BI skill demand and growth trajectory page" width="100%" />
 
-**Purpose:** Compare measurable week-over-week skill changes, investigate the top-five daily demand pattern, and understand skill concentration across job postings.
+Week-over-week skill changes, top-five daily demand pattern, and skill concentration.
 
-### 03 — Compensation benchmarks & highest-paying skills
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
-<p align="center">
-  <img src="assets/intelligence.png" alt="Power BI compensation intelligence page" width="100%" />
-</p>
+#### 03 · Compensation benchmarks
+<img src="assets/intelligence.png" alt="Power BI compensation intelligence page" width="100%" />
 
-**Purpose:** Benchmark salary by seniority, reveal the best-paying skills, compare compensation by category and workplace type, and inspect high-paying opportunities.
+Salary by seniority, best-paying skills, category and workplace comparisons, high-paying roles.
 
-### 04 — Company hiring cadence & remote-work shift
+</td>
+<td width="50%" valign="top">
 
-<p align="center">
-  <img src="assets/company%26%20workplace.png" alt="Power BI company hiring cadence and remote work shift page" width="100%" />
-</p>
+#### 04 · Hiring cadence & remote shift
+<img src="assets/company%26%20workplace.png" alt="Power BI company hiring cadence and remote work shift page" width="100%" />
 
-**Purpose:** Identify high-volume hiring companies, quantify reposting, assess posting cadence, and track remote/hybrid/on-site mix over time.
+High-volume employers, reposting rate, posting cadence, and remote/hybrid/on-site mix over time.
 
-> **Power BI refresh note:** Open the `.pbix` file and select **Home → Refresh** before presenting, so the report uses the latest curated CSV data rather than an older cached snapshot.
+</td>
+</tr>
+</table>
+
+> [!NOTE]
+> **Power BI refresh:** open the `.pbix`, then **Home → Refresh** before presenting so it uses the latest curated CSVs.
 
 ---
 
-## Data model
+## 🧬 Data model
 
 ```mermaid
 erDiagram
@@ -188,24 +235,24 @@ erDiagram
 
 | Layer | Main asset | Why it exists |
 | --- | --- | --- |
-| **Bronze** | `raw_data/` | Immutable source pulls; no transformation is applied. |
-| **Silver** | `clean_data/fact_jobs.csv` | One cleaned, analysis-ready row per job listing. |
-| **Silver** | `clean_data/job_skills_bridge.csv` | Many-to-many job-to-skill relationship for correct skill measures. |
-| **Serving** | `clean_data/pipelineops.db` / database tables | Persistent storage for the dashboard and run metadata. |
-| **Presentation** | `powerbi/` and `dashboard/` | Executive reporting and exploratory self-service analytics. |
+| 🥉 **Bronze** | `raw_data/` | Immutable source pulls; no transformation applied. |
+| 🥈 **Silver** | `clean_data/fact_jobs.csv` | One cleaned row per job listing. |
+| 🥈 **Silver** | `clean_data/job_skills_bridge.csv` | Many-to-many job-to-skill relationship for correct skill measures. |
+| 🗄️ **Serving** | `clean_data/pipelineops.db` | Persistent storage for dashboards and run metadata. |
+| 📊 **Presentation** | `powerbi/` and `dashboard/` | Executive reporting and self-service exploration. |
 
 ---
 
-## Repository map
+## 📁 Repository map
 
 ```text
 pipelineops/
-├── assets/                  # Power BI dashboard screenshots used above
+├── assets/                  # Dashboard screenshots + animated pipeline SVG
 ├── aws/                     # Optional S3/IAM deployment artefacts
 ├── clean_data/              # Curated CSVs, quality report, statistical insights
 ├── dags/                    # Airflow DAG definition
 ├── dashboard/               # Streamlit application
-├── docs/                    # Data dictionary, insights, and resume bullet
+├── docs/                    # Data dictionary, insights, resume bullet
 ├── powerbi/                 # PipelineOPS.pbix, DAX library, dashboard blueprint
 ├── python/                  # Ingestion, transform, quality, storage, scheduler
 ├── raw_data/                # Untouched bronze API pulls
@@ -218,9 +265,10 @@ pipelineops/
 
 ---
 
-## Run it locally
+## ⚡ Run it locally
 
-### 1. Prepare Python and configuration
+<details open>
+<summary><strong>1 · Prepare Python and configuration</strong></summary>
 
 ```powershell
 git clone <your-repository-url>
@@ -231,63 +279,67 @@ pip install -r requirements.txt
 Copy-Item .env.example .env
 ```
 
-Update `.env` only if you are changing storage, cloud, or alert settings. Keep secrets out of source control.
+Edit `.env` only if you change storage, cloud, or alert settings. Keep secrets out of source control.
 
-### 2. Build the first historical dataset
+</details>
+
+<details open>
+<summary><strong>2 · Build the first historical dataset</strong></summary>
 
 ```powershell
 python python/orchestrator.py --seed --seed-days 30
 ```
 
-This produces historical trend data in addition to the live pull, then runs transform, quality, statistics, and storage stages.
+Produces historical trend data in addition to the live pull, then runs transform, quality, statistics, and storage.
 
-### 3. Run the dashboard
+</details>
+
+<details>
+<summary><strong>3 · Run the dashboard</strong></summary>
 
 ```powershell
 streamlit run dashboard/app.py
 ```
 
-### 4. Run checks before sharing
+</details>
+
+<details>
+<summary><strong>4 · Run checks before sharing</strong></summary>
 
 ```powershell
 pytest tests/test_pipeline.py -v
 ```
 
-### 5. Schedule it
+</details>
+
+<details>
+<summary><strong>5 · Schedule it</strong></summary>
 
 ```powershell
-# Run once now
-python python/scheduler.py --run-once
-
-# Refresh every 24 hours
-python python/scheduler.py --interval-hours 24
-
-# Quick local scheduler test
-python python/scheduler.py --interval-seconds 60
+python python/scheduler.py --run-once                      # run once now
+python python/scheduler.py --interval-hours 24             # refresh daily
+python python/scheduler.py --interval-seconds 60           # quick local test
 ```
+
+</details>
 
 <details>
 <summary><strong>Useful run variants</strong></summary>
 
-<br />
-
 ```powershell
-# Process existing raw partitions without a live API request
-python python/orchestrator.py --no-live
-
-# Generate a different amount of historical seed data
-python python/orchestrator.py --seed --seed-days 60
+python python/orchestrator.py --no-live                    # reprocess existing raw partitions
+python python/orchestrator.py --seed --seed-days 60        # more historical seed data
 ```
 
 </details>
 
 ---
 
-## Data quality & statistics
+## 🛡️ Data quality & statistics
 
 ### Automated quality gates
 
-The pipeline does not silently hand bad data to the dashboard. It checks:
+The pipeline does not silently hand bad data to the dashboard.
 
 | Gate | Protection |
 | --- | --- |
@@ -295,42 +347,53 @@ The pipeline does not silently hand bad data to the dashboard. It checks:
 | Primary-key uniqueness | Prevents duplicate job IDs. |
 | Required-field null checks | Requires job ID, title, company, posted date, and workplace type. |
 | Schema validation | Detects missing or unexpected structural changes. |
-| Salary-range validation | Flags compensation outside the configured realistic bounds. |
+| Salary-range validation | Flags compensation outside configured realistic bounds. |
 
 ### Statistical insight
 
-The analysis uses `scipy.stats.linregress` rather than claiming a trend from a chart alone. The latest verified output found a **downward Python-listing trend of 0.355 listings per day** with **p = 0.0080** and **R² = 0.316**. This is displayed as a qualified, reproducible finding; it is not presented as a causal conclusion.
+The analysis uses `scipy.stats.linregress` instead of reading a trend off a chart. The latest verified output shows a **downward Python-listing trend of 0.355 listings/day** (**p = 0.0080**, **R² = 0.316**), presented as a qualified, reproducible finding, not a causal conclusion.
 
 ---
 
-## Analytics experiences
+## ⚠️ Limitations & honest caveats
+
+- **Single source:** data comes from one job API, so it reflects that board's listings, not the whole market.
+- **Small sample:** 172 listings across 26 companies is enough for a demonstration, not for market-wide claims.
+- **Short window:** the trend regression uses a limited date range; treat it as indicative and re-run as history grows.
+- **Correlation, not causation:** a falling Python listing count does not mean Python demand is falling market-wide.
+- **Predicted salaries:** rows flagged `is_salary_predicted` are estimates, not posted figures.
+
+---
+
+## 🧭 Analytics experiences
 
 | Experience | Best for | Location |
 | --- | --- | --- |
-| **Power BI** | Structured executive storytelling, filters, and presentation-ready reporting. | [`powerbi/PipelineOPS.pbix`](powerbi/PipelineOPS.pbix) |
-| **Streamlit** | Interactive investigation across Q1–Q4 plus pipeline health. | [Open the live dashboard](https://pipelineops-analytics-klmnopqr.streamlit.app/) · [`dashboard/app.py`](dashboard/app.py) |
-| **Data dictionary** | Field definitions and engineered-column transparency. | [`docs/data_dictionary.md`](docs/data_dictionary.md) |
-| **DAX measure library** | Rebuilding or reviewing Power BI calculations. | [`powerbi/dax_measures.dax`](powerbi/dax_measures.dax) |
-| **Dashboard blueprint** | Visual-by-visual Power BI build specification. | [`powerbi/dashboard_blueprint.md`](powerbi/dashboard_blueprint.md) |
+| 📊 **Power BI** | Executive storytelling and presentation-ready reporting | [`powerbi/PipelineOPS.pbix`](powerbi/PipelineOPS.pbix) |
+| 🖥️ **Streamlit (live)** | Interactive investigation and pipeline health | [Open the live dashboard](https://pipelineops-analytics-klmnopqr.streamlit.app/) · [`dashboard/app.py`](dashboard/app.py) |
+| 📘 **Data dictionary** | Field definitions and engineered columns | [`docs/data_dictionary.md`](docs/data_dictionary.md) |
+| 🧮 **DAX library** | Rebuilding or reviewing Power BI measures | [`powerbi/dax_measures.dax`](powerbi/dax_measures.dax) |
+| 🗺️ **Dashboard blueprint** | Visual-by-visual build specification | [`powerbi/dashboard_blueprint.md`](powerbi/dashboard_blueprint.md) |
 
 ---
 
-## Configuration, storage & deployment
+## ⚙️ Configuration, storage & deployment
 
 - **API:** Remotive job API, configured in `config.yaml`.
-- **Storage:** SQLite is the local default; the storage layer can use a configured database connection.
-- **Cloud:** S3 support is optional and isolated in `python/s3_uploader.py` with related assets in `aws/`.
-- **Orchestration:** Use the lightweight scheduler locally or the Airflow DAG in `dags/` for managed scheduling.
-- **Observability:** Pipeline runs, record counts, duration, stage status, and quality result are persisted for review.
-- **Alerts:** Failure alerting is configuration-driven; add your approved email or webhook settings before enabling external notifications.
+- **Storage:** SQLite by default; the storage layer can use a configured database connection.
+- **Cloud:** optional S3 support in `python/s3_uploader.py`, with assets in `aws/`.
+- **Orchestration:** lightweight local scheduler or the Airflow DAG in `dags/`.
+- **Observability:** runs, record counts, duration, stage status, and quality result are persisted.
+- **Alerts:** configuration-driven; add approved email or webhook settings before enabling.
+- **Hosting:** the Streamlit app is deployed on [Streamlit Community Cloud](https://pipelineops-analytics-klmnopqr.streamlit.app/).
 
 ---
 
-## Project documentation
+## 📚 Project documentation
 
-| Document | What it helps you explain in a review or interview |
+| Document | What it helps you explain |
 | --- | --- |
-| [`docs/insights.md`](docs/insights.md) | Numbers-first findings from the current analytical dataset. |
+| [`docs/insights.md`](docs/insights.md) | Numbers-first findings from the current dataset. |
 | [`docs/data_dictionary.md`](docs/data_dictionary.md) | How raw and engineered fields should be interpreted. |
 | [`docs/resume_bullet.md`](docs/resume_bullet.md) | A concise resume-ready project statement. |
 | [`sql/schema.sql`](sql/schema.sql) | Relational design, keys, and storage schema. |
@@ -344,10 +407,14 @@ The analysis uses `scipy.stats.linregress` rather than claiming a trend from a c
 
 **PipelineOps = reliable ingestion + traceable data quality + honest analysis + clear decisions.**
 
+<a href="https://pipelineops-analytics-klmnopqr.streamlit.app/">
+  <img src="https://img.shields.io/badge/▶%20See%20it%20live-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="See it live" />
+</a>
+
 <sub>Refresh the pipeline. Refresh Power BI. Tell the next market story.</sub>
 
 </div>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&amp;color=0:F97316,55:2563EB,100:0B192C&amp;height=120&amp;section=footer&amp;animation=fadeIn" alt="Animated footer" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:F97316,55:2563EB,100:0B192C&height=120&section=footer&animation=twinkling" alt="Animated footer" width="100%" />
 </p>
