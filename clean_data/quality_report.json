@@ -1,0 +1,74 @@
+{
+  "validated_at": "2026-10-22T14:09:51.537186+00:00",
+  "overall_status": "PASSED",
+  "quality_score_pct": 100.0,
+  "total_checks": 9,
+  "passed_checks": 9,
+  "failed_checks": 0,
+  "record_count_evaluated": 172,
+  "checks": [
+    {
+      "check_name": "row_count_threshold",
+      "passed": true,
+      "actual": 172,
+      "expected": ">= 10",
+      "description": "Verifies dataset has at least 10 records."
+    },
+    {
+      "check_name": "primary_key_uniqueness",
+      "passed": true,
+      "actual": "0 duplicates",
+      "expected": "0 duplicates",
+      "description": "Verifies all job_id primary keys are strictly unique."
+    },
+    {
+      "check_name": "null_check_job_id",
+      "passed": true,
+      "actual": "0.0% null (0 rows)",
+      "expected": "<= 0.0% null",
+      "description": "Ensures mandatory field 'job_id' contains no missing values."
+    },
+    {
+      "check_name": "null_check_job_title",
+      "passed": true,
+      "actual": "0.0% null (0 rows)",
+      "expected": "<= 0.0% null",
+      "description": "Ensures mandatory field 'job_title' contains no missing values."
+    },
+    {
+      "check_name": "null_check_company_name",
+      "passed": true,
+      "actual": "0.0% null (0 rows)",
+      "expected": "<= 0.0% null",
+      "description": "Ensures mandatory field 'company_name' contains no missing values."
+    },
+    {
+      "check_name": "null_check_posted_at",
+      "passed": true,
+      "actual": "0.0% null (0 rows)",
+      "expected": "<= 0.0% null",
+      "description": "Ensures mandatory field 'posted_at' contains no missing values."
+    },
+    {
+      "check_name": "null_check_remote_type",
+      "passed": true,
+      "actual": "0.0% null (0 rows)",
+      "expected": "<= 0.0% null",
+      "description": "Ensures mandatory field 'remote_type' contains no missing values."
+    },
+    {
+      "check_name": "schema_drift_detection",
+      "passed": true,
+      "actual": "All standard columns present",
+      "expected": "Zero missing expected schema columns",
+      "description": "Validates schema drift against baseline contracts."
+    },
+    {
+      "check_name": "salary_value_bounds",
+      "passed": true,
+      "actual": "0 out-of-range rows",
+      "expected": "0 rows outside [$15k, $600k]",
+      "description": "Ensures salary calculations fall within realistic economic ranges."
+    }
+  ]
+}

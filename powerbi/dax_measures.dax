@@ -1,0 +1,65 @@
+// Create these after importing and naming the two queries exactly
+// fact_jobs and job_skills_bridge. Apply formats in the Modeling ribbon.
+
+// CALCULATED COLUMN on fact_jobs (Date type)
+Posted Date =
+DATE ( YEAR ( fact_jobs[posted_at] ), MONTH ( fact_jobs[posted_at] ), DAY ( fact_jobs[posted_at] ) )
+
+// CALCULATED TABLE. Mark Date[Date] as the date table.
+Date =
+ADDCOLUMNS (
+    CALENDAR ( MIN ( fact_jobs[Posted Date] ), MAX ( fact_jobs[Posted Date] ) ),
+    "Year", YEAR ( [Date] ),
+    "Month No", MONTH ( [Date] ),
+    "Month", FORMAT ( [Date], "MMM" ),
+    "Year Month", FORMAT ( [Date], "YYYY-MM" ),
+    "Week Start", [Date] - WEEKDAY ( [Date], 2 ) + 1,
+    "Week Label", FORMAT ( [Date] - WEEKDAY ( [Date], 2 ) + 1, "dd MMM" )
+)
+
+// CORE
+Total Jobs = DISTINCTCOUNT ( fact_jobs[job_id] )
+Unique Companies = DISTINCTCOUNT ( fact_jobs[company_name] )
+Skill Mentions = COUNTROWS ( job_skills_bridge )
+Avg Salary USD = CALCULATE ( AVERAGE ( fact_jobs[salary_avg] ), fact_jobs[salary_avg] > 0 )
+Avg Reported Salary USD = CALCULATE ( [Avg Salary USD], fact_jobs[is_salary_predicted] = FALSE () )
+Predicted Salary Share = DIVIDE ( CALCULATE ( [Total Jobs], fact_jobs[is_salary_predicted] = TRUE () ), [Total Jobs] )
+Latest Posting Date = CALCULATE ( MAX ( fact_jobs[Posted Date] ), REMOVEFILTERS () )
+Data Window Label =
+VAR StartDate = CALCULATE ( MIN ( fact_jobs[Posted Date] ), REMOVEFILTERS () )
+RETURN FORMAT ( StartDate, "dd MMM yyyy" ) & " – " & FORMAT ( [Latest Posting Date], "dd MMM yyyy" )
+
+// WORKPLACE
+Remote Jobs = CALCULATE ( [Total Jobs], fact_jobs[remote_type] = "Fully Remote" )
+Hybrid Jobs = CALCULATE ( [Total Jobs], fact_jobs[remote_type] = "Hybrid" )
+On-site Jobs = CALCULATE ( [Total Jobs], fact_jobs[remote_type] = "On-site" )
+Remote Ratio = DIVIDE ( [Remote Jobs], [Total Jobs] )
+
+// SKILL DEMAND. The end date is the most recent loaded record, not TODAY().
+Skill Mentions Current 7D =
+VAR EndDate = [Latest Posting Date]
+RETURN CALCULATE ( [Skill Mentions], REMOVEFILTERS ( 'Date' ), DATESBETWEEN ( 'Date'[Date], EndDate - 6, EndDate ) )
+Skill Mentions Previous 7D =
+VAR EndDate = [Latest Posting Date]
+RETURN CALCULATE ( [Skill Mentions], REMOVEFILTERS ( 'Date' ), DATESBETWEEN ( 'Date'[Date], EndDate - 13, EndDate - 7 ) )
+WoW Skill Growth =
+VAR Previous = [Skill Mentions Previous 7D]
+RETURN IF ( Previous = 0 || ISBLANK ( Previous ), BLANK (), DIVIDE ( [Skill Mentions Current 7D] - Previous, Previous ) )
+WoW Growth Colour = IF ( [WoW Skill Growth] >= 0, "#10B981", "#EF4444" )
+
+// COMPENSATION
+Senior Salary Premium = CALCULATE ( [Avg Salary USD], fact_jobs[seniority_level] = "Senior" ) - CALCULATE ( [Avg Salary USD], fact_jobs[seniority_level] = "Junior" )
+Remote Salary Premium = CALCULATE ( [Avg Salary USD], fact_jobs[remote_type] = "Fully Remote" ) - CALCULATE ( [Avg Salary USD], fact_jobs[remote_type] = "On-site" )
+Top Paid Skill =
+VAR OneSkill = TOPN ( 1, ALL ( job_skills_bridge[skill_name] ), [Avg Salary USD], DESC )
+RETURN CONCATENATEX ( OneSkill, job_skills_bridge[skill_name], ", " )
+
+// COMPANY ACTIVITY
+Repost Jobs = CALCULATE ( [Total Jobs], fact_jobs[repost_status] = "repost" )
+Repost Ratio = DIVIDE ( [Repost Jobs], [Total Jobs] )
+Company First Post = MIN ( fact_jobs[Posted Date] )
+Company Last Post = MAX ( fact_jobs[Posted Date] )
+Company Posting Cadence Days = DIVIDE ( DATEDIFF ( [Company First Post], [Company Last Post], DAY ), [Total Jobs] - 1 )
+Top Hiring Company =
+VAR OneCompany = TOPN ( 1, ALL ( fact_jobs[company_name] ), [Total Jobs], DESC )
+RETURN CONCATENATEX ( OneCompany, fact_jobs[company_name], ", " )

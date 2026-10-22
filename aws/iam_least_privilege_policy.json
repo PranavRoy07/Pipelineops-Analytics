@@ -1,0 +1,55 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowPipelineOpsS3BucketListing",
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListBucket",
+        "s3:GetBucketLocation"
+      ],
+      "Resource": "arn:aws:s3:::pipelineops-analytics-lake"
+    },
+    {
+      "Sid": "AllowPipelineOpsReadWriteBronzeAndSilverLayers",
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject",
+        "s3:GetObject",
+        "s3:PutObjectTagging",
+        "s3:GetObjectTagging",
+        "s3:AbortMultipartUpload"
+      ],
+      "Resource": [
+        "arn:aws:s3:::pipelineops-analytics-lake/bronze/*",
+        "arn:aws:s3:::pipelineops-analytics-lake/silver/*",
+        "arn:aws:s3:::pipelineops-analytics-lake/gold/*"
+      ]
+    },
+    {
+      "Sid": "DenyUnencryptedObjectUploads",
+      "Effect": "Deny",
+      "Action": "s3:PutObject",
+      "Resource": "arn:aws:s3:::pipelineops-analytics-lake/*",
+      "Condition": {
+        "StringNotEquals": {
+          "s3:x-amz-server-side-encryption": "AES256"
+        }
+      }
+    },
+    {
+      "Sid": "DenyInsecureTransportSSL",
+      "Effect": "Deny",
+      "Action": "s3:*",
+      "Resource": [
+        "arn:aws:s3:::pipelineops-analytics-lake",
+        "arn:aws:s3:::pipelineops-analytics-lake/*"
+      ],
+      "Condition": {
+        "Bool": {
+          "aws:SecureTransport": "false"
+        }
+      }
+    }
+  ]
+}

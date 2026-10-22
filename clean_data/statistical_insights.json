@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-10-22T14:09:52.248179+00:00",
+  "headline_card": "-0.355 daily listings trend (p=0.0080, R\u00b2=0.32)",
+  "primary_skill_regression": {
+    "metric": "Python Demand Velocity",
+    "headline": "-0.355 daily listings trend (p=0.0080, R\u00b2=0.32)",
+    "slope": -0.3551,
+    "intercept": 12.9131,
+    "r_value": -0.5621,
+    "r_squared": 0.316,
+    "p_value": 0.008,
+    "std_err": 0.1199,
+    "is_statistically_significant": true,
+    "direction": "downward",
+    "data_points": 21,
+    "plain_english_insight": "Statistically significant downward trend (p=0.0080 < 0.05) with 31.6% of daily variance explained by linear time progression.",
+    "interview_talking_point": "Demonstrated that Python postings declined by 2.49 listings/week with statistical significance (p=0.0080)."
+  },
+  "salary_skill_correlation": {
+    "metric": "Skill Stacking Salary Premium",
+    "headline": "+$8,249 per additional skill tag (p=0.0000)",
+    "slope": 8249.35,
+    "p_value": 0.0,
+    "r_squared": 0.1235,
+    "plain_english_insight": "Each additional qualified cloud/data skill tag is correlated with a +$8,249 average salary increase."
+  }
+}

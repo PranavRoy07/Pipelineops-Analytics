@@ -1,0 +1,64 @@
+# PipelineOps Configuration
+
+pipeline:
+  name: "pipelineops-analytics"
+  version: "1.0.0"
+  timezone: "UTC"
+
+api:
+  primary_source: "remotive" # remotive or remoteok
+  endpoints:
+    remotive: "https://remotive.com/api/remote-jobs?limit=100"
+    remoteok: "https://remoteok.com/api"
+  timeout_seconds: 30
+  retry:
+    max_retries: 3
+    backoff_factor: 2.0
+    status_forcelist: [429, 500, 502, 503, 504]
+  headers:
+    User-Agent: "PipelineOps-ETL-Bot/1.0 (Job Market Analytics Pipeline; contact@pipelineops.local)"
+
+storage:
+  # SQLite fallback is automatic if DATABASE_URL is not set or PostgreSQL is unavailable
+  default_sqlite_path: "clean_data/pipelineops.db"
+  raw_data_dir: "raw_data"
+  clean_data_dir: "clean_data"
+  parquet_filename: "fact_jobs.parquet"
+  csv_filename: "fact_jobs.csv"
+  s3:
+    enabled: false
+    bucket_name: "pipelineops-analytics-lake"
+    bronze_prefix: "bronze/"
+    silver_prefix: "silver/"
+    region: "us-east-1"
+
+quality_gates:
+  min_record_threshold: 10
+  max_allowed_drop_ratio: 0.50 # Alert if record count drops >50% from previous run
+  max_null_pct:
+    job_id: 0.0
+    job_title: 0.0
+    company_name: 0.0
+    posted_at: 0.0
+    remote_type: 0.0
+  allow_duplicates: false
+  salary_bounds:
+    min_reasonable_usd: 15000
+    max_reasonable_usd: 500000
+
+alerting:
+  enabled: true
+  channel: "console" # console, webhook, or email
+  webhook_url: "" # e.g. Slack/Discord webhook URL
+  email:
+    smtp_server: "smtp.gmail.com"
+    smtp_port: 587
+    sender: ""
+    recipient: ""
+    password: ""
+  notify_on_success: false
+  notify_on_failure: true
+
+scheduler:
+  interval_hours: 24
+  cron_expression: "0 3 * * *" # Daily at 03:00 UTC
