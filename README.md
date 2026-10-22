@@ -3,7 +3,7 @@
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://pipelineops-analytics-klmnopqr.streamlit.app/)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Data Quality](https://img.shields.io/badge/Data%20Quality-100%25%20Passed-brightgreen.svg)]()
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]()
+[![Power BI](https://img.shields.io/badge/Power%20BI-4%20Dashboard%20Pages-F2C811.svg)](powerbi/PipelineOPS.pbix)
 
 🌐 **Live Production Dashboard:** [https://pipelineops-analytics-klmnopqr.streamlit.app/](https://pipelineops-analytics-klmnopqr.streamlit.app/)
 
@@ -144,7 +144,7 @@ This single command will:
 - Transform and normalize all data (Pandas)
 - Run all 9 data quality gates
 - Compute scipy.stats.linregress statistical insights
-- Load 165+ jobs into the warehouse
+- Load the current curated job listings into the warehouse
 
 ### 3. Launch the Dashboard
 ```bash
@@ -291,12 +291,12 @@ Using `scipy.stats.linregress` on daily Python job posting frequency over the 30
 ```python
 from scipy import stats
 slope, intercept, r_value, p_value, std_err = stats.linregress(day_index, daily_mention_count)
-# slope:   -1.205  (listings/day)
-# p_value: 0.0011  (< 0.05 → statistically significant)
-# R²:      0.54    (54% of variance explained)
+# slope:   -0.3551 (listings/day)
+# p_value: 0.0080  (< 0.05 → statistically significant)
+# R²:      0.316   (31.6% of variance explained)
 ```
 
-**Interpretation:** Python postings show a statistically significant decline in velocity (p = 0.0011), consistent with market saturation of Python-only roles. Python + Cloud stack combinations remain premium.
+**Latest interpretation:** Python postings show a statistically significant downward trend of 0.355 listings per day (p = 0.0080). This describes the observed sample; it does not claim a cause for the change.
 
 ---
 
@@ -305,11 +305,31 @@ slope, intercept, r_value, p_value, std_err = stats.linregress(day_index, daily_
 See [powerbi/schema_guide.md](powerbi/schema_guide.md) for step-by-step connection guide.  
 Import DAX measures from [powerbi/dax_measures.dax](powerbi/dax_measures.dax).
 
+Open the completed report: [powerbi/PipelineOPS.pbix](powerbi/PipelineOPS.pbix).
+
+### Power BI Dashboard Pages
+
+**1. Executive Overview**
+
+![PipelineOps Power BI executive overview](assets/Overview.png)
+
+**2. Skill Demand & Growth Trajectory**
+
+![PipelineOps Power BI skills trends](assets/Trends.png)
+
+**3. Compensation Benchmarks & Highest-Paying Skills**
+
+![PipelineOps Power BI compensation intelligence](assets/intelligence.png)
+
+**4. Company Hiring Cadence & Remote Work Shift**
+
+![PipelineOps Power BI company and workplace analysis](assets/company%26%20workplace.png)
+
 ---
 
 ## Resume Bullet
 
-> Built an orchestrated data pipeline ingesting live job-market data via API on a daily schedule (APScheduler / Apache Airflow); stored raw and transformed layers in PostgreSQL / SQLite following Bronze→Silver→Gold medallion architecture; added 9 automated data-quality checks; delivered a Power BI + Streamlit dashboard with scipy.stats.linregress trend analysis (p = 0.0011, R² = 0.54).
+> Built an orchestrated data pipeline ingesting live job-market data via API on a daily schedule (APScheduler / Apache Airflow); stored raw and transformed layers in PostgreSQL / SQLite following Bronze→Silver→Gold medallion architecture; added 9 automated data-quality checks; delivered a Power BI + Streamlit dashboard with reproducible scipy.stats.linregress trend analysis.
 
 See [docs/resume_bullet.md](docs/resume_bullet.md) for full LinkedIn copy and interview talking points.
 
